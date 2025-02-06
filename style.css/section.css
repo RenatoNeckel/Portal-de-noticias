@@ -1,0 +1,124 @@
+#destaques {
+  grid-area: destaques;
+  
+  img {
+    height: 100%; /*para a foto cobrir todo o espaço disponivel*/
+    object-fit: cover; /*para a img se ajustar no novo tamanho*/
+  }
+  
+  .card { /*tag criada para sobre por o degrade na img*/
+    border-radius: 4px; /* arredonadar as imgs e a borda*/
+    overflow: hidden; /*significa tranbordamento e o hidden para esconder tudo o que passa da caixa*/
+    position: relative;
+    &::before { /*para criar a tag before dentro da tag utilizasse o "&"*/ 
+      content: "";
+      position: absolute;
+      inset: 0;
+      top: 50%; /*posição inicial do degrade*/
+      background: linear-gradient( /*gradiente significa degrade e linear que sai de um pouco para outro*/
+        180deg, /*angulação que quero*/
+        transparent 0%, /*cor inicial*/
+        #020617 100% /*cor final*/
+      );
+    }
+
+    figcaption { /*chamando a estrutura do texto*/
+      position: absolute; /*posição do texto, acima da img*/
+      bottom: 0; /*local do texto*/
+      padding: 24px; /*espaço do texto*/
+
+      &:has(.text-lg) { /*procura algum local que tenha a carcteristica "text-lg" para aplicar as mudanças*/
+        padding: 12px;
+      }
+
+      h2 {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+section header {
+  border-top: 1px solid var(--stroke-color);
+  padding-block: 12px 24px;
+  font: var(--text-span);
+
+  a { /*organização da header */
+    justify-self: end; 
+    align-items: center;
+    gap: 8px;
+
+    span { /*adicionando a arrow na header*/
+      background-image: url(../assets/icons/ArrowRight1.svg);
+      width: 16px;
+      height: 16px;
+    }
+
+  &:hover span { /*funcionalidade da arrow*/
+    background-image: url(../assets/icons/ArrowRight2.svg);
+  }
+  }
+}
+
+
+#weekly {
+  grid-area: weekly;
+
+  &>div { /*primeiro nivel de div apos o header weekly*/
+    grid-template-columns: repeat(4, 292px);
+  }
+
+  img {
+    height: 160px;
+  }
+
+  figure {
+    position: relative; /*para aceitar o posicion absolute*/
+
+    .content-tag {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+    }
+   
+    p {
+      margin-top: 8px;
+      font-weight: 800;
+    }
+
+  }
+}
+
+#ia {
+  grid-area: ai;
+  img {
+    width: 176px;
+    aspect-ratio: 1/1; /*img quadrada*/
+    object-fit: cover; /*cobrir espaços*/
+
+  }
+
+h3 {
+    margin-block: 8px 4px;
+  }
+}
+
+
+aside {
+  grid-area: aside;
+}
+
+#more {
+  margin-top: 32px;
+
+  h3 {
+    margin-top: 8px;
+  }
+  img {
+    width: 72px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+
+}
