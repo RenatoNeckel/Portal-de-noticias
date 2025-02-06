@@ -8,11 +8,14 @@ Projeto de um Portal de notícias desenvolvido durante as aulas de Grid na Rocke
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 
 
+
+<p align="center">
+  <img alt="Preview do projeto desenvolvido." src="./assets/imags/preview.png" width="60%">
+</p>
 <br>
 
 ## 🚀 Tecnologias
